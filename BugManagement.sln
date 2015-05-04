@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.DomainModel", "BugManagement.DomainModel\BugManagement.DomainModel.csproj", "{30C05ECA-BF37-4F8F-879C-3973C08E5319}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{2B3EFF4A-C6CB-4143-96DD-356198A8C80A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9AC49527-97CF-408A-A91F-59477F96C933}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{19D67CD7-F227-4FB4-8D7D-F04E2CA1DE56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A8E0D17A-191B-4F01-9334-3B1573BB0396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30C05ECA-BF37-4F8F-879C-3973C08E5319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C05ECA-BF37-4F8F-879C-3973C08E5319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C05ECA-BF37-4F8F-879C-3973C08E5319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C05ECA-BF37-4F8F-879C-3973C08E5319}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30C05ECA-BF37-4F8F-879C-3973C08E5319} = {9AC49527-97CF-408A-A91F-59477F96C933}
+	EndGlobalSection
+EndGlobal
