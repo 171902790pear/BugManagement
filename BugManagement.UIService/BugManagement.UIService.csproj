@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B29108A-5B2E-4D00-8A42-D49BA0B66145}</ProjectGuid>
+    <ProjectGuid>{CDB7E3F6-0350-43B6-B59F-0C59F276699B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BugManagement.Persistence</RootNamespace>
-    <AssemblyName>BugManagement.Persistence</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>BugManagement.UIService</RootNamespace>
+    <AssemblyName>BugManagement.UIService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,14 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,16 +39,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BugManagementDbContext.cs" />
+    <Compile Include="IUIService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BugManagement.DomainModel\BugManagement.DomainModel.csproj">
-      <Project>{30C05ECA-BF37-4F8F-879C-3973C08E5319}</Project>
-      <Name>BugManagement.DomainModel</Name>
+    <ProjectReference Include="..\BugManagement.ApplicationRequest\BugManagement.ApplicationDto.csproj">
+      <Project>{3afae70f-bb00-439d-8c89-5e7cf4da1340}</Project>
+      <Name>BugManagement.ApplicationDto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugManagement.ApplicationService\BugManagement.ApplicationService.csproj">
+      <Project>{e76fb007-90d2-4104-9922-a9e2caaf67d7}</Project>
+      <Name>BugManagement.ApplicationService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugManagement.UICommand\BugManagement.UICommand.csproj">
+      <Project>{1219f604-b486-4a4b-acea-071158f443ab}</Project>
+      <Name>BugManagement.UICommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugManagement.ViewModel\BugManagement.ViewModel.csproj">
+      <Project>{67d576b0-54a3-4bbd-b0f8-cdee2ddacccf}</Project>
+      <Name>BugManagement.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

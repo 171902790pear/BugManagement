@@ -26,11 +26,14 @@ namespace BugManagement.DomainModel
         public virtual string Title { get; set; }
         public virtual string Description { get; set; }
 
+        public virtual Guid ProjectId { get; set; }
+
         public virtual Project Project { get; set; }
 
         public virtual int? Status { get; set; }
 
         public virtual User Assigner { get; set; }
+        public virtual Guid AssignerId { get; set; }
 
         public virtual ICollection<BugOperationRecord> OperationRecords { get; set; }
 
@@ -64,10 +67,12 @@ namespace BugManagement.DomainModel
     }
     public class BugOperationRecord : EntityBase
     {
-        
         public virtual DateTime? OperateTime { get; set; }
         public virtual User Operater { get; set; }
         public virtual int? Operate { get; set; }
+        public virtual Guid OperaterId { get; set; }
+        public virtual Bug Bug { get; set; }
+        public virtual Guid BugId { get; set; }
     }
 
     public enum BugOperate
@@ -92,7 +97,8 @@ namespace BugManagement.DomainModel
         public virtual string Password { get; set; }
         public virtual string LastName { get; set; }
         public virtual string FirstName { get; set; }
-
+        public virtual ICollection<Bug> Bugs { get; set; }
+        public virtual ICollection<BugOperationRecord> BugOperationRecords { get; set; }
     }
 
 }
