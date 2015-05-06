@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +48,7 @@
     <Compile Include="DomainService.cs" />
     <Compile Include="IDomainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindsorInstaller\DomainServiceInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugManagement.DomainFactory\BugManagement.DomainFactory.csproj">
@@ -60,6 +67,9 @@
       <Project>{f2c38890-4cfc-4f7d-8b02-f0d008fc0f99}</Project>
       <Name>BugManagement.DomainDto</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

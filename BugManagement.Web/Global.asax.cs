@@ -2,6 +2,10 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using BugManagement.ApplicationService.WindsorInstaller;
+using BugManagement.UIService.WindsorInstaller;
+using Castle.Windsor;
+using Castle.Windsor.Installer;
 
 namespace BugManagement.Web
 {
@@ -20,6 +24,12 @@ namespace BugManagement.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
 
+            var container = new WindsorContainer();
+            container.Install(
+                FromAssembly.This(), 
+                FromAssembly.Containing<UIServiceInstaller>(),
+                FromAssembly.Containing<ApplicationServiceInstaller>()
+                );
         }
     }
 }
