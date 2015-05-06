@@ -36,7 +36,14 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +54,7 @@
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindsorInstaller\RepositoryInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BugManagement.DomainModel\BugManagement.DomainModel.csproj">
@@ -57,10 +65,16 @@
       <Project>{ad56ffc4-3ff7-4f37-9560-a09249fca713}</Project>
       <Name>BugManagement.IRepository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugManagement.Persistence\BugManagement.Persistence.csproj">
+      <Project>{0b29108a-5b2e-4d00-8a42-d49ba0b66145}</Project>
+      <Name>BugManagement.Persistence</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
