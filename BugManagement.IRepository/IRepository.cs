@@ -3,7 +3,7 @@ using BugManagement.DomainModel;
 
 namespace BugManagement.IRepository
 {
-    public interface IRepository<TAggregateRoot> where TAggregateRoot : IAggregateRoot
+    public interface IRepository<TAggregateRoot> where TAggregateRoot : AggregateRootBase
     {
         void Save(TAggregateRoot tRoot);
         void Update(TAggregateRoot tRoot);

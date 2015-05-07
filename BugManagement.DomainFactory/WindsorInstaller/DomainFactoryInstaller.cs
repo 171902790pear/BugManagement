@@ -9,7 +9,7 @@ namespace BugManagement.DomainFactory.WindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IUserFactory>().ImplementedBy<UserFactory>());
+            container.Register(Component.For<IUserFactory>().ImplementedBy<UserFactory>().LifestylePerWebRequest());
         }
     }
 }

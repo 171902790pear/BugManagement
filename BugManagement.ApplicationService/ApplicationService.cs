@@ -25,4 +25,6 @@ namespace BugManagement.ApplicationService
             _domainService.CreateUser(dto);
         }
     }
+
+
 }

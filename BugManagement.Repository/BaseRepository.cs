@@ -7,22 +7,23 @@ using Castle.Windsor;
 
 namespace BugManagement.Repository
 {
-    public abstract class BaseRepository<TAggregateRoot> : IRepository<TAggregateRoot> where TAggregateRoot : IAggregateRoot
+    public class BaseRepository<TAggregateRoot> : IRepository<TAggregateRoot> where TAggregateRoot : AggregateRootBase
     {
-        private readonly IWindsorContainer _windsorContainer;
-        private DbContext _dbContext;
-        protected BaseRepository(IWindsorContainer windsorContainer)
+        private readonly IWindsorContainer _container;
+        private readonly DbContext _dbContext;
+        public BaseRepository(IWindsorContainer container)
         {
-            _windsorContainer = windsorContainer;
-            _dbContext = _windsorContainer.Resolve<BugManagementDbContext>();
+            _container = container;
+            _dbContext = _container.Resolve<BugManagementDbContext>();
         }
 
-        public void Save(TAggregateRoot tRoot)
+        public void Save(TAggregateRoot aggregateRoot)
         {
-            throw new System.NotImplementedException();
+            _dbContext.Set<TAggregateRoot>().Add(aggregateRoot);
+            _dbContext.SaveChanges();
         }
 
-        public void Update(TAggregateRoot tRoot)
+        public void Update(TAggregateRoot aggregateRoot)
         {
             throw new System.NotImplementedException();
         }
@@ -37,7 +38,7 @@ namespace BugManagement.Repository
             throw new System.NotImplementedException();
         }
 
-        public void Delete(TAggregateRoot tRoot)
+        public void Delete(TAggregateRoot aggregateRoot)
         {
             throw new System.NotImplementedException();
         }

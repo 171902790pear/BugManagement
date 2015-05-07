@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace BugManagement.DomainModel
 {
-    public interface IAggregateRoot
+
+    public abstract class AggregateRootBase : EntityBase
     {
+
     }
     public abstract class EntityBase
     {
         public virtual Guid Id { get; set; }
     }
 
-    public class Project : EntityBase, IAggregateRoot
+    public class Project : AggregateRootBase
     {
-        
         public virtual string Name { get; set; }
         public virtual ICollection<Bug> Bugs { get; set; }
     }
 
-    public class Bug : EntityBase, IAggregateRoot
+    public class Bug : AggregateRootBase
     {
         public virtual string Title { get; set; }
         public virtual string Description { get; set; }
@@ -91,7 +92,7 @@ namespace BugManagement.DomainModel
         Closed=4
     }
 
-    public class User : EntityBase, IAggregateRoot
+    public class User : AggregateRootBase
     {
         public virtual string Username { get; set; }
         public virtual string Password { get; set; }

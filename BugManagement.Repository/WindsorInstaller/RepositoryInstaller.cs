@@ -1,4 +1,6 @@
 ﻿using System;
+using BugManagement.DomainModel;
+using BugManagement.Persistence;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
@@ -9,7 +11,10 @@ namespace BugManagement.Repository.WindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IWindsorContainer>().Instance(container).LifestylePerWebRequest());
+            container.Register(
+                Component.For(typeof(IRepository.IRepository<>)).ImplementedBy(typeof(BaseRepository<>)).LifestyleTransient(),
+                Component.For<BugManagementDbContext>().LifestyleSingleton()
+                );
         }
     }
 }

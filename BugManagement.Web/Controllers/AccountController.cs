@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using BugManagement.UICommand;
 using BugManagement.UIService;
 
 namespace BugManagement.Web.Controllers
@@ -10,8 +7,7 @@ namespace BugManagement.Web.Controllers
     public class AccountController : Controller
     {
         private readonly IUIService _service;
-        //
-        // GET: /Account/
+        
         public AccountController(IUIService service)
         {
             _service = service;
@@ -20,6 +16,13 @@ namespace BugManagement.Web.Controllers
         [HttpGet]
         public ActionResult Signup()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Signup(SignupCommand signupCommand)
+        {
+            _service.Signup(signupCommand);
             return View();
         }
 

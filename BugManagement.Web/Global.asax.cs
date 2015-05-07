@@ -3,7 +3,12 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using BugManagement.ApplicationService.WindsorInstaller;
+using BugManagement.DomainFactory.WindsorInstaller;
+using BugManagement.DomainService.WindsorInstaller;
+using BugManagement.Repository.WindsorInstaller;
 using BugManagement.UIService.WindsorInstaller;
+using BugManagement.Web.WindsorInstaller;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 
@@ -17,19 +22,21 @@ namespace BugManagement.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-
 
             var container = new WindsorContainer();
+            container.Register(Component.For<IWindsorContainer>().Instance(container).LifestylePerWebRequest());
             container.Install(
-                FromAssembly.This(), 
+                FromAssembly.This(),
                 FromAssembly.Containing<UIServiceInstaller>(),
-                FromAssembly.Containing<ApplicationServiceInstaller>()
+                FromAssembly.Containing<ApplicationServiceInstaller>(),
+                FromAssembly.Containing<DomainServiceInstaller>(),
+                FromAssembly.Containing<DomainFactoryInstaller>(),
+                FromAssembly.Containing<RepositoryInstaller>()
                 );
+            ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory(container));
         }
     }
 }
