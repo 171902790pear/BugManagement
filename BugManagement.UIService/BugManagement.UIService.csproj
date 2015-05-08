@@ -51,8 +51,8 @@
     <Compile Include="WindsorInstaller\UIServiceInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BugManagement.ApplicationRequest\BugManagement.ApplicationDto.csproj">
-      <Project>{3afae70f-bb00-439d-8c89-5e7cf4da1340}</Project>
+    <ProjectReference Include="..\BugManagement.ApplicationDto\BugManagement.ApplicationDto.csproj">
+      <Project>{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}</Project>
       <Name>BugManagement.ApplicationDto</Name>
     </ProjectReference>
     <ProjectReference Include="..\BugManagement.ApplicationService\BugManagement.ApplicationService.csproj">

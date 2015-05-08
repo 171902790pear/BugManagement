@@ -50,13 +50,13 @@
     <Compile Include="WindsorInstaller\DomainFactoryInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BugManagement.DomainDto\BugManagement.DomainDto.csproj">
+      <Project>{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}</Project>
+      <Name>BugManagement.DomainDto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BugManagement.DomainModel\BugManagement.DomainModel.csproj">
       <Project>{30c05eca-bf37-4f8f-879c-3973c08e5319}</Project>
       <Name>BugManagement.DomainModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BugManagement.PresentationRequest\BugManagement.DomainDto.csproj">
-      <Project>{f2c38890-4cfc-4f7d-8b02-f0d008fc0f99}</Project>
-      <Name>BugManagement.DomainDto</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

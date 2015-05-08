@@ -37,13 +37,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.IRepository",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.UIService", "BugManagement.UIService\BugManagement.UIService.csproj", "{CDB7E3F6-0350-43B6-B59F-0C59F276699B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.ApplicationDto", "BugManagement.ApplicationRequest\BugManagement.ApplicationDto.csproj", "{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTransferObjects", "DataTransferObjects", "{A8A0D81E-CC9D-421B-B6F0-0C74CDD739F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.DomainDto", "BugManagement.PresentationRequest\BugManagement.DomainDto.csproj", "{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.Common", "BugManagement.Common\BugManagement.Common.csproj", "{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.ApplicationDto", "BugManagement.ApplicationDto\BugManagement.ApplicationDto.csproj", "{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugManagement.DomainDto", "BugManagement.DomainDto\BugManagement.DomainDto.csproj", "{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +99,10 @@ Global
 		{CDB7E3F6-0350-43B6-B59F-0C59F276699B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB7E3F6-0350-43B6-B59F-0C59F276699B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB7E3F6-0350-43B6-B59F-0C59F276699B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -107,10 +111,6 @@ Global
 		{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

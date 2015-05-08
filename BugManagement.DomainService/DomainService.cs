@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using BugManagement.Common;
-using BugManagement.DomainDto;
+﻿using BugManagement.DomainDto;
 using BugManagement.DomainFactory;
-using BugManagement.DomainModel;
 using BugManagement.IRepository;
 
 namespace BugManagement.DomainService

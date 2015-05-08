@@ -51,17 +51,17 @@
     <Compile Include="WindsorInstaller\ApplicationServiceInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BugManagement.ApplicationRequest\BugManagement.ApplicationDto.csproj">
-      <Project>{3afae70f-bb00-439d-8c89-5e7cf4da1340}</Project>
+    <ProjectReference Include="..\BugManagement.ApplicationDto\BugManagement.ApplicationDto.csproj">
+      <Project>{3AFAE70F-BB00-439D-8C89-5E7CF4DA1340}</Project>
       <Name>BugManagement.ApplicationDto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugManagement.DomainDto\BugManagement.DomainDto.csproj">
+      <Project>{F2C38890-4CFC-4F7D-8B02-F0D008FC0F99}</Project>
+      <Name>BugManagement.DomainDto</Name>
     </ProjectReference>
     <ProjectReference Include="..\BugManagement.DomainService\BugManagement.DomainService.csproj">
       <Project>{5bd60a42-9a82-43fb-845f-35fffe6bef7e}</Project>
       <Name>BugManagement.DomainService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BugManagement.PresentationRequest\BugManagement.DomainDto.csproj">
-      <Project>{f2c38890-4cfc-4f7d-8b02-f0d008fc0f99}</Project>
-      <Name>BugManagement.DomainDto</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
