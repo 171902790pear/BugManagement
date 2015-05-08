@@ -26,7 +26,7 @@ namespace BugManagement.UIService
             _applicationService.Signup(user);
         }
 
-        public bool SignIn(string username, string password)
+        public bool SignIn(SignInCommand cmd)
         {
             throw new NotImplementedException();
         }

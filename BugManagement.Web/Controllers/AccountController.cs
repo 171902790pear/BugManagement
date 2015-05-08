@@ -54,9 +54,16 @@ namespace BugManagement.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult SignIn(string username="")
+        public ActionResult SignIn(string username = "")
         {
             return View(username);
+        }
+
+        [HttpPost]
+        public ActionResult SignIn([ModelBinder(typeof(JsonBinder<SignInCommand>))]SignInCommand command)
+        {
+
+            return SuccessResult();
         }
     }
 }
