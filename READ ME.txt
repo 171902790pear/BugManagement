@@ -1,0 +1,32 @@
+项目架构说明：
+1 Presentation 展现层
+2 Application 应用层
+3 Domain 领域层
+4 Infrastructure 基础设施层
+5 Tests 单元测试
+6 Document 项目文档
+
+各项目职责及调用关系：
+1 Web 网站前台
+2 UICommand 前台UI命令对象
+3 ViewModel 前台页面视图模型
+4 UIService 展现层服务，供web端controller调用
+5 ApplicationService 应用层暴露给展现层的调用接口
+6 ApplicationDto 应用层与展现层交互的数据传输对象
+7 DomainService 领域层暴露给应用层的调用接口
+8 DomainDto 领域层与应用层交互的数据传输对象
+9 DomainModel 核心的业务领域对象
+10 DomainFactory 创建领域对象的接口（从无到有）,以聚合为单位
+11 Repository 持久化和重建领域对象，以聚合为单位
+12 Persistence 持久化数据访问层
+13 Common 通用功能类库
+
+项目使用到的技术和框架：
+1 angularJs
+2 jQuery
+3 requireJs
+4 bootstrap
+5 asp.net mvc
+6 castle windsor
+7 entity framework (code first)
+
