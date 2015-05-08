@@ -24,7 +24,7 @@ namespace BugManagement.Web
         {
             if (controllerType == null)
             {
-                throw new HttpException(404, string.Format("The controller for path '{0}' could not be found.", requestContext.HttpContext.Request.Path));
+                return null;
             }
             return (IController)_container.Resolve(controllerType);
         }

@@ -5,6 +5,8 @@ namespace BugManagement.UIService
     public interface IUIService
     {
         void Signup(SignupCommand cmd);
-        bool CheckUserIsExist(string username, string password);
+        bool SignIn(string username, string password);
+
+        bool CheckUsernameExist(string username);
     }
 }

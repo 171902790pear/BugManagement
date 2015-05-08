@@ -51,6 +51,10 @@
     <Compile Include="WindsorInstaller\DomainServiceInstaller.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BugManagement.Common\BugManagement.Common.csproj">
+      <Project>{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}</Project>
+      <Name>BugManagement.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BugManagement.DomainFactory\BugManagement.DomainFactory.csproj">
       <Project>{0d70b96d-c61c-4ab5-b8ec-e40eda8215ff}</Project>
       <Name>BugManagement.DomainFactory</Name>

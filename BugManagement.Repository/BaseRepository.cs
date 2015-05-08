@@ -10,7 +10,7 @@ namespace BugManagement.Repository
     public class BaseRepository<TAggregateRoot> : IRepository<TAggregateRoot> where TAggregateRoot : AggregateRootBase
     {
         private readonly IWindsorContainer _container;
-        private readonly DbContext _dbContext;
+        protected readonly DbContext _dbContext;
         public BaseRepository(IWindsorContainer container)
         {
             _container = container;

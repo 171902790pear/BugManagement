@@ -24,6 +24,11 @@ namespace BugManagement.ApplicationService
             };
             _domainService.CreateUser(dto);
         }
+
+        public bool CheckUsernameExist(string username)
+        {
+            return _domainService.CheckUsernameExist(username);
+        }
     }
 
 

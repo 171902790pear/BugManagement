@@ -129,9 +129,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\JsonBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WindsorControllerFactory.cs" />
     <Compile Include="WindsorInstaller\ControllerInstaller.cs" />
@@ -183,7 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -192,6 +193,10 @@
     <ProjectReference Include="..\BugManagement.ApplicationService\BugManagement.ApplicationService.csproj">
       <Project>{e76fb007-90d2-4104-9922-a9e2caaf67d7}</Project>
       <Name>BugManagement.ApplicationService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugManagement.Common\BugManagement.Common.csproj">
+      <Project>{8B9979E7-6D5E-4DEA-9553-FA554F6945BB}</Project>
+      <Name>BugManagement.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\BugManagement.DomainFactory\BugManagement.DomainFactory.csproj">
       <Project>{0D70B96D-C61C-4AB5-B8EC-E40EDA8215FF}</Project>

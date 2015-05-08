@@ -26,9 +26,14 @@ namespace BugManagement.UIService
             _applicationService.Signup(user);
         }
 
-        public bool CheckUserIsExist(string username, string password)
+        public bool SignIn(string username, string password)
         {
             throw new NotImplementedException();
+        }
+
+        public bool CheckUsernameExist(string username)
+        {
+            return _applicationService.CheckUsernameExist(username);
         }
     }
 }

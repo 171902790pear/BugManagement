@@ -6,5 +6,19 @@
         dataType:'json'
     }).done(function(result) {
         
-    }).fail(function() {});
+    });
+});
+
+$('#txtUsername').blur(function() {
+    $.ajax({
+        url: "/Account/CheckUserName",
+        method: 'post',
+        data: { username: $('#txtUsername').val()},
+        dataType: 'json'
+    }).done(function (result) {
+        if (!result.Success) {
+            $('#txtUsername').next('span')
+                .html(result.Errors[0].ErrorMessage);
+        }
+    });
 });
