@@ -8,7 +8,25 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    @RenderBody()
+    <div id="divMain">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="aTitle" class="navbar-brand" href="#">Bug Management</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="ulNav">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Bugs</a></li>
+                        <li><a href="/account/signin">Sign in</a></li>
+                        <li><a href="/account/signup">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="height: 100px;width: 100%"></div>
+        @RenderBody()
+    </div>
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
     <script src="~/Scripts/JSONHelper.js"></script>
     @RenderSection("scripts", required: false)

@@ -1,0 +1,39 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Sign In";
+}
+
+<div id="divSignIn">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <span id="spanSignIn">Sign In</span>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" id="formSignIn">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" value="@Model" class="form-control" id="txtUsername" placeholder="Username" name="Username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input name="Password" type="password" class="form-control" id="txtPassword" placeholder="Password">
+                    </div>
+                </div>
+                
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <input type="button" class="btn btn-success" id="btnSignIn" value="Sign In">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/signIn.js"></script>
+}

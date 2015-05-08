@@ -3,4 +3,9 @@ html,body {
     height: 100%;
 }
 
+#aTitle{ margin-left: 500px;font-size: 24px;}
+#ulNav li{ margin-left: 50px;}
+#divMain{ width: 60%;margin: 0 auto;}
 .red{ color: red;}
+#divSignup,#divSignIn{ width: 60%;margin: 0 auto;margin-top: 20px;}
+#spanSignup,#spanSignIn{ font-size: 20px;}

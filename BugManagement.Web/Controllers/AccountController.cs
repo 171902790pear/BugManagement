@@ -52,5 +52,11 @@ namespace BugManagement.Web.Controllers
             }
             return SuccessResult();
         }
+
+        [HttpGet]
+        public ActionResult SignIn(string username="")
+        {
+            return View(username);
+        }
     }
 }
