@@ -20,7 +20,6 @@ namespace BugManagement.Repository
         public void Save(TAggregateRoot aggregateRoot)
         {
             _dbContext.Set<TAggregateRoot>().Add(aggregateRoot);
-            _dbContext.SaveChanges();
         }
 
         public void Update(TAggregateRoot aggregateRoot)

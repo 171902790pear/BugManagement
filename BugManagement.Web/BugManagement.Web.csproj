@@ -220,6 +220,10 @@
       <Project>{cdb7e3f6-0350-43b6-b59f-0c59f276699b}</Project>
       <Name>BugManagement.UIService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugManagement.UnitOfWork\BugManagement.UnitOfWork.csproj">
+      <Project>{ED8D67AD-82AF-4960-859A-FC6CFE9095D6}</Project>
+      <Name>BugManagement.UnitOfWork</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BugManagement.ViewModel\BugManagement.ViewModel.csproj">
       <Project>{67d576b0-54a3-4bbd-b0f8-cdee2ddacccf}</Project>
       <Name>BugManagement.ViewModel</Name>

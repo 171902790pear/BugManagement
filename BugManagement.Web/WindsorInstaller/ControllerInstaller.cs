@@ -9,16 +9,15 @@ using Castle.Windsor;
 
 namespace BugManagement.Web.WindsorInstaller
 {
-    public class ControllerInstaller:IWindsorInstaller
+    public class ControllerInstaller : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(
-                Classes
-                    .FromThisAssembly()
-                    .BasedOn<IController>()
-                    .LifestyleTransient()
+                Classes.FromThisAssembly().BasedOn<IController>().LifestyleTransient(),
+                Component.For<IWindsorContainer>().Instance(container).LifestylePerWebRequest()
                 );
+
         }
     }
 }
