@@ -10,7 +10,7 @@ namespace BugManagement.UnitOfWork.WindsorInstaller
         {
             container.Register(
                 Component.For<IUnitOfWork>().ImplementedBy<UnitOfWork>().LifestylePerWebRequest(),
-                Component.For<IUnitOfWorkFactory>().ImplementedBy<IUnitOfWorkFactory>().LifestylePerWebRequest()
+                Component.For<IUnitOfWorkFactory>().ImplementedBy<UnitOfWorkFactory>().LifestylePerWebRequest()
                 );
         }
     }

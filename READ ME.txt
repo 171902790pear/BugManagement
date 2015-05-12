@@ -13,13 +13,16 @@
 4 UIService 展现层服务，供web端controller调用
 5 ApplicationService 应用层暴露给展现层的调用接口
 6 ApplicationDto 应用层与展现层交互的数据传输对象
-7 DomainService 领域层暴露给应用层的调用接口
-8 DomainDto 领域层与应用层交互的数据传输对象
+7 DomainService 领域层暴露给应用层的调用接口， （其作用不是协调多个聚合联动更新，多个聚合更新将使用领域事件）
+8 DomainDto 领域层与应用层交互的数据传输对象，可以使domain model不直接暴露给应用层
 9 DomainModel 核心的业务领域对象
 10 DomainFactory 创建领域对象的接口（从无到有）,以聚合为单位
 11 Repository 持久化和重建领域对象，以聚合为单位
 12 Persistence 持久化数据访问层
 13 Common 通用功能类库
+14 UnitOfWork 工作单元，保持业务状态更新到db的一致性
+
+
 
 项目使用到的技术和框架：
 1 angularJs
