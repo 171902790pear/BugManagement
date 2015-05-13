@@ -1,4 +1,5 @@
-﻿using BugManagement.DomainDto;
+﻿using System.Collections.Generic;
+using BugManagement.DomainDto;
 
 namespace BugManagement.DomainService
 {
@@ -6,5 +7,7 @@ namespace BugManagement.DomainService
     {
         void CreateUser(UserDomainDto user);
         bool CheckUsernameExist(string username);
+        bool CheckUserExist(UserDomainDto signInDto);
+        List<ProjectDomainDto> GetProjects();
     }
 }

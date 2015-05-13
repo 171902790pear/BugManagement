@@ -1,5 +1,9 @@
-﻿using BugManagement.DomainDto;
+﻿using System.Collections.Generic;
+using System.Linq;
+using BugManagement.Common;
+using BugManagement.DomainDto;
 using BugManagement.DomainFactory;
+using BugManagement.DomainModel;
 using BugManagement.IRepository;
 using BugManagement.UnitOfWork;
 
@@ -10,12 +14,14 @@ namespace BugManagement.DomainService
         private readonly IUserFactory _userFactory;
         private readonly IUserRepository _userRepository;
         private readonly IUnitOfWorkFactory _unitOfWorkFactory;
+        private readonly IRepository<Project> _projectRepository;
 
-        public DomainService(IUserFactory userFactory, IUserRepository userRepository, IUnitOfWorkFactory unitOfWorkFactory)
+        public DomainService(IUserFactory userFactory, IUserRepository userRepository, IUnitOfWorkFactory unitOfWorkFactory, IRepository<Project> projectRepository)
         {
             _userFactory = userFactory;
             _userRepository = userRepository;
             _unitOfWorkFactory = unitOfWorkFactory;
+            _projectRepository = projectRepository;
         }
 
         public void CreateUser(UserDomainDto userDto)
@@ -32,6 +38,20 @@ namespace BugManagement.DomainService
         {
             var user = _userRepository.GetByUsername(username);
             return user != null;
+        }
+
+        public bool CheckUserExist(UserDomainDto signInDto)
+        {
+            var user = _userRepository.GetByUsernameAndPassword(signInDto.Username, signInDto.Password);
+            return user != null;
+        }
+
+        public List<ProjectDomainDto> GetProjects()
+        {
+            var projectDomainDtos = new List<ProjectDomainDto>();
+            var projects = _projectRepository.GetAll().ToList();
+            projects.ForEach(x => projectDomainDtos.Add(x.ToProjectDomainDto()));
+            return projectDomainDtos;
         }
     }
 }

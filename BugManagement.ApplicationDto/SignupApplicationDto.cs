@@ -1,6 +1,6 @@
 ﻿namespace BugManagement.ApplicationDto
 {
-    public class UserApplicationDto
+    public class SignupApplicationDto
     {
         public string Username { get; set; }
         public string Password { get; set; }

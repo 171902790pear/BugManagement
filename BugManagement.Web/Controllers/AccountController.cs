@@ -33,7 +33,7 @@ namespace BugManagement.Web.Controllers
             {
                 errors.Add(new ErrorInfo() { Name = "Username", ErrorMessage = "The username is already exist!" });
             }
-            errors.AddRange(signupCommand.Validation());
+            errors.AddRange(signupCommand.Validation().ToList());
             if (errors.Any())
             {
                 throw new ErrorException(errors);
@@ -62,7 +62,16 @@ namespace BugManagement.Web.Controllers
         [HttpPost]
         public ActionResult SignIn([ModelBinder(typeof(JsonBinder<SignInCommand>))]SignInCommand command)
         {
-
+            var errors = command.Validation().ToList();
+            if (errors.Any())
+            {
+                throw new ErrorException(errors);
+            }
+            var result=_service.SignIn(command);
+            if (!result)
+            {
+                throw new ErrorException(new List<ErrorInfo>(){new ErrorInfo(){Name = "Username",ErrorMessage = "Username or password is error"}});
+            }
             return SuccessResult();
         }
     }

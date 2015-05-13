@@ -15,12 +15,14 @@
                     <label class="col-sm-3 control-label">Username</label>
                     <div class="col-sm-9">
                         <input type="text" value="@Model" class="form-control" id="txtUsername" placeholder="Username" name="Username">
+                        <span class="red"></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
                         <input name="Password" type="password" class="form-control" id="txtPassword" placeholder="Password">
+                        <span class="red"></span>
                     </div>
                 </div>
                 
@@ -28,6 +30,7 @@
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
                         <input type="button" class="btn btn-success" id="btnSignIn" value="Sign In">
+                        <br/><br/>No account?To <a href="/Signup">Signup</a>
                     </div>
                 </div>
             </form>

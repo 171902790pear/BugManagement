@@ -20,5 +20,10 @@ namespace BugManagement.Repository
         {
             return _dbContext.Set<User>().SingleOrDefault(x => x.Username == username);
         }
+
+        public User GetByUsernameAndPassword(string username, string password)
+        {
+            return _dbContext.Set<User>().SingleOrDefault(x => x.Username == username && x.Password == password);
+        }
     }
 }

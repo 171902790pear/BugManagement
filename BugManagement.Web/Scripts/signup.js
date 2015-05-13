@@ -10,7 +10,7 @@ $('#btnSignup').click(function () {
     }).done(function(result) {
         if (result.Success) {
             alert('Signup Success');
-            window.location.href = '/Account/SignIn';
+            window.location.href = '/SignIn/' + $('#txtUsername').val();
         } else {
             for (var i = 0; i < result.Errors.length; i++) {
                 var error = result.Errors[i];

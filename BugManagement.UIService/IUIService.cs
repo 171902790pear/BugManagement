@@ -1,4 +1,5 @@
 ﻿using BugManagement.UICommand;
+using BugManagement.ViewModel;
 
 namespace BugManagement.UIService
 {
@@ -8,5 +9,6 @@ namespace BugManagement.UIService
         bool SignIn(SignInCommand cmd);
 
         bool CheckUsernameExist(string username);
+        ProjectListViewModel GetProjectListViewModel();
     }
 }

@@ -34,7 +34,7 @@ namespace BugManagement.Repository
 
         public IEnumerable<TAggregateRoot> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _dbContext.Set<TAggregateRoot>();
         }
 
         public void Delete(TAggregateRoot aggregateRoot)

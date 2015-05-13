@@ -59,6 +59,10 @@
       <Project>{e76fb007-90d2-4104-9922-a9e2caaf67d7}</Project>
       <Name>BugManagement.ApplicationService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugManagement.Common\BugManagement.Common.csproj">
+      <Project>{8b9979e7-6d5e-4dea-9553-fa554f6945bb}</Project>
+      <Name>BugManagement.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BugManagement.UICommand\BugManagement.UICommand.csproj">
       <Project>{1219f604-b486-4a4b-acea-071158f443ab}</Project>
       <Name>BugManagement.UICommand</Name>

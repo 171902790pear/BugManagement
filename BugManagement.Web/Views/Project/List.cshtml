@@ -1,0 +1,13 @@
+﻿@model BugManagement.ViewModel.ProjectListViewModel
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<table class="table table-bordered table-striped centerTable" id="tblProjects">
+    <tr><th>Projects</th></tr>
+    @foreach (var project in Model.Projects)
+    {
+        <tr><td>@project.Name</td></tr>
+    }
+</table>
